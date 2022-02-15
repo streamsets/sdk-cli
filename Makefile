@@ -7,6 +7,7 @@ all:
 
 .PHONY: build # Builds for current OS binary
 build:
+	@pkger -include /assets
 	@go build
 	@mv sdk-cli sx
 

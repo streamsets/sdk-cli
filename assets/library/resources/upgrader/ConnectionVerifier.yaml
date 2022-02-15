@@ -1,0 +1,8 @@
+#
+# Copyright 2021 StreamSets Inc.
+#
+
+upgraderVersion: 1
+
+# No upgrade rules defined
+upgrades: []

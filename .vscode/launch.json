@@ -10,14 +10,7 @@
       "request": "launch",
       "mode": "auto",
       "program": "main.go",
-      "args": [
-        "init",
-        "singer-io",
-        "--createLibrary",
-        "--createConnection",
-        "--project",
-        "test123"
-      ]
+      "args": ["--project", "Singer-IO", "--createConnection"]
     }
   ]
 }

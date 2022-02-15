@@ -5,7 +5,9 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
+	"github.com/streamsets/sdk-cli/engines"
 	"github.com/streamsets/sdk-cli/models"
+	"github.com/streamsets/sdk-cli/util"
 )
 
 var rootCmd = &cobra.Command{
@@ -17,7 +19,9 @@ var rootCmd = &cobra.Command{
 
 		switch flags.Engine {
 		case "datacollector":
-			
+			util.WriteStatus(fmt.Sprintf("Creating Maven Project for DataCollector Component - %s", flags.Project))
+			dc := engines.NewDataCollector(flags.Project, flags.CreateConnection, flags.CreateLibrary)
+			dc.Build()
 		case "spark":
 			panic("Spark implementation not supported at this time")
 		case "snowflake":
